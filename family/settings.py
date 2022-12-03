@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-^@chv85^xzzvi+2x3k-hwzu9*zch5t%$4uxb$b_*fm31vb79mu
 DEBUG = False
 #DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'family-tree7.herokuapp.com',]
+ALLOWED_HOSTS = ['127.0.0.1', 'family-tree.onrender.com',]
 
 # Application definition (Зарегистрированные приложегия)
 
