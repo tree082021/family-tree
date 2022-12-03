@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "List" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "List" %}</h2>
+{% if person_list.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "Full name" %}</th>
+				<th>{% trans "Father" %}</th>
+				<th>{% trans "Mother" %}</th>
+				<th></th>
+				<th><a href="{% url 'person_create'%}">{% trans "Create" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in person_list %}
+			<tr>
+				<td>
+					<h5>{{ p.fio }}</h5>
+					{% if p.birthday20 != None and p.birthday20 != '' %}
+						<p><strong>{% trans "Date of Birth" %}</strong>: {{ p.birthday20 }}</p>
+					{% endif %}
+				</td>
+				<td>
+					{% if p.father != None %}
+					{{ p.father }}
+					{% endif %}	
+				</td>
+				<td>
+					{% if p.mother != None %}
+					{{ p.mother }}
+					{% endif %}	
+				</td>				
+				<td>
+					{% if p.photo.url != None %}
+					<img style="width:100%; max-width:256px; padding:10px" src="{{ p.photo.url}}" alt="{{ p.fio }}">
+					{% endif %}	
+				</td>
+				<td>
+					<a href="{% url 'person_edit' p.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'person_read' p.id %}">{% trans "Read" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'person_delete' p.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'person_create'%}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
+

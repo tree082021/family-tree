@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Tree" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+{% if man.count > 0 %}
+<h2>{% trans "Tree" %}</h2>
+<div class="row">
+	<pre>	
+	{%for item in tree%}
+	<font color=navy> {{item}} </font>	
+    {% endfor %}
+	</pre>
+</div>
+{% endif %}
+{% endblock content %}
+

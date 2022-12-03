@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% trans "Read" %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>{{ person_list.fio }}</h4>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-8">				
+					<table>		
+					{% if request.user.groups.all.0.name == "Managers"%}
+						<tr>
+							<td><strong>{% trans "sex" %}</strong>&nbsp:</td>
+							<td>{{ person_list.sex }}</td>
+						</tr>
+						<tr>
+							<td><strong>{% trans "birthday" %}</strong>&nbsp:</td>
+							<td>{{ person_list.birthday20 }}</td>
+						</tr>				
+						{% if person_list.tribe != None and person_list.tribe != ''%}
+							<tr>
+								<td><strong>{% trans "tribe" %}</strong>&nbsp:</td>
+								<td>{{ person_list.tribe }}</td>
+							</tr>
+						{% endif %}	
+						{% if person_list.clan != None and person_list.clan != ''%}
+							<tr>
+								<td><strong>{% trans "clan" %}</strong>&nbsp:</td>
+								<td>{{ person_list.clan }}</td>
+							</tr>
+						{% endif %}	
+						{% if person_list.phone != None and person_list.phone != ''%}
+							<tr>
+								<td><strong>{% trans "phone" %}</strong>&nbsp:</td>
+								<td>{{ person_list.phone }}</td>
+							</tr>
+						{% endif %}	
+						{% if person_list.address != None and person_list.address != '' %}
+							<tr>
+								<td><strong>{% trans "address" %}</strong>&nbsp:</td>
+								<td>{{ person_list.address }}</td>
+							</tr>
+						{% endif %}
+						{% if person_list.email != None and person_list.email != '' %}
+							<tr>
+								<td><strong>{% trans "email" %}</strong>&nbsp:</td>
+								<td>{{ person_list.email }}</td>
+							</tr>
+						{% endif %}
+					{% endif %}
+					{% if person_list.father != None %}
+						<tr>
+							<td><strong>{% trans "father" %}</strong>&nbsp:</td>
+							<td>{{ person_list.father }}</td>
+						</tr>
+					{% endif %}
+					{% if person_list.mother != None %}
+						<tr>
+							<td><strong>{% trans "mother" %}</strong>&nbsp:</td>
+							<td>{{ person_list.mother }}</td>
+						</tr>
+					{% endif %}					
+					{% if person_list.details != None and person_list.details != '' %}
+						<tr>
+							<td><strong>{% trans "details" %}</strong>&nbsp:</td>
+							<td>{{ person_list.details }}</td>
+						</tr>
+					{% endif %}
+					</table>				
+				</div>
+				<div class="col-md-4">
+					{% if person_list.photo.url != None %}
+						<img style="width:100%; max-width:512px; padding:10px" src="{{ person_list.photo.url}}" alt="{{ person_list.title }}">					
+					{% endif %}	
+				</div>
+			</div>				
+		</div>
+		<div class="card-footer">				
+			{% if person_list.children != None %}
+				<p><strong>{% trans "children" %}</strong>:&nbsp{{ person_list.children }}</p>
+			{% endif %}			
+		</div>		
+	</div>
+	{% if request.user.groups.all.0.name == "Managers" %}
+		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'person_index' %}">Назад</a>    	
+		{% else %}
+		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'person_list' %}">Назад</a>    	
+	{% endif %}
+</div>
+
+{% endblock content %}

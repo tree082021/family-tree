@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Catalog" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "List" %}</h2>
+<div class="row" style="width:100%">
+	<a href="{% url 'export_person_excel' %}">{% trans "Export Excel" %}</a>
+</div>
+{% if request.user.groups.all.0.name == "Managers" %}
+<div class="row" style="width:100%">
+	<a href="{% url 'export_person_chart' %}">{% trans "Export Chart" %}</a>
+</div>
+{% endif %}		
+<div class="row" style="width:100%">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		{% if person_list.count > 0 %}
+		<tbody>
+			{% for p in person_list %}
+			<tr>
+				<td>
+					<div class="card" style="width:100%">
+						<div class="card-header">							
+							<h4><a href="{% url 'person_read' p.id %}">{{ p.fio }}</a></h4>
+						</div>
+						<div class="card-body">					
+							<div class="row">
+								
+								<div class="col-md-8">
+									<table tyle="width:100%">			
+										{% if p.father != None %}										
+											<tr>
+												<td><strong>{% trans "father" %}:</strong></td><td style="width:100%"> {{ p.father }}</td>
+											</tr>
+										{% endif %}	
+										{% if p.mother != None %}										
+											<tr>
+												<td><strong>{% trans "mother" %}:</strong></td><td style="width:100%"> {{ p.mother }}</td>
+											</tr>
+										{% endif %}							
+										</tr>
+									</table>												
+								</div>
+								<div class="col-md-4">
+									{% if p.photo.url != None %}
+										<img style="width:100%; max-width:256px;padding:5px" src="{{ p.photo.url}}" alt="{{ p.fio }}">
+									{% endif %}
+								</div>
+								
+							</div>
+						</div>
+						<div class="card-footer">
+							{% if p.children != None %}
+								<strong>{% trans "children" %}:</strong> {{ p.children }}
+							{% endif %}								
+						</div>
+					</div>				
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		{% endif %}
+	</table>
+</div>
+{% endblock content %}
+

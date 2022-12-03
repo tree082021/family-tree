@@ -1,0 +1,382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-15 15:58+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: .\templates\base.html:25
+msgid "Home"
+msgstr "Yй"
+
+#: .\templates\base.html:32
+msgid "Contact"
+msgstr "Байланыс"
+
+#: .\templates\base.html:37 .\templates\catalog.html:3
+msgid "Catalog"
+msgstr "Тізім"
+
+#: .\templates\base.html:41
+msgid "Person"
+msgstr "Адам"
+
+#: .\templates\base.html:50 .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+#, fuzzy
+#| msgid "Create my account"
+msgid "My account"
+msgstr "Менің есептік жазбамды жасаңыз"
+
+#: .\templates\base.html:51
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:14
+#, fuzzy
+#| msgid "New password:"
+msgid "Change password"
+msgstr "Жаңа Құпия Сөз:"
+
+#: .\templates\base.html:53
+#, fuzzy
+#| msgid "Logged out!"
+msgid "Log out"
+msgstr "Жүйеден шықтыңыз"
+
+#: .\templates\base.html:59 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Тіркелу"
+
+#: .\templates\catalog.html:5 .\templates\person\index.html:3
+#: .\templates\person\index.html:6
+msgid "List"
+msgstr "Тізім"
+
+#: .\templates\catalog.html:7
+msgid "Export Excel"
+msgstr "Excel-ге экспорттау"
+
+#: .\templates\catalog.html:11
+msgid "Export Chart"
+msgstr "Суретке экспорттау"
+
+#: .\templates\catalog.html:37 .\templates\person\read.html:57
+#: .\tree\forms.py:32 .\tree\models.py:154 .\tree\views.py:336
+msgid "father"
+msgstr "Әке"
+
+#: .\templates\catalog.html:42 .\templates\person\read.html:63
+#: .\tree\forms.py:33 .\tree\models.py:156 .\tree\views.py:337
+msgid "mother"
+msgstr "Ана"
+
+#: .\templates\catalog.html:58 .\templates\person\read.html:84
+#: .\tree\models.py:157 .\tree\views.py:348 .\tree\views.py:350
+msgid "children"
+msgstr "Балалар"
+
+#: .\templates\contact.html:8
+msgid "Contacts"
+msgstr "Байланыстар"
+
+#: .\templates\index.html:3 .\templates\index.html:7
+msgid "Tree"
+msgstr "Шежіре"
+
+#: .\templates\person\create.html:3 .\templates\person\create.html:4
+#: .\templates\person\index.html:16 .\templates\person\index.html:54
+msgid "Create"
+msgstr "Жасау"
+
+#: .\templates\person\edit.html:3 .\templates\person\edit.html:4
+#: .\templates\person\index.html:44
+msgid "Change"
+msgstr "Өзгерту"
+
+#: .\templates\person\index.html:12
+msgid "Full name"
+msgstr "Толық аты"
+
+#: .\templates\person\index.html:13
+msgid "Father"
+msgstr "Әке"
+
+#: .\templates\person\index.html:14
+msgid "Mother"
+msgstr "Ана"
+
+#: .\templates\person\index.html:25
+msgid "Date of Birth"
+msgstr "Туған күні"
+
+#: .\templates\person\index.html:45 .\templates\person\read.html:3
+#: .\templates\person\read.html:4
+msgid "Read"
+msgstr "Көру"
+
+#: .\templates\person\index.html:46
+msgid "Delete"
+msgstr "Жою"
+
+#: .\templates\person\read.html:17 .\tree\models.py:39 .\tree\models.py:143
+#: .\tree\views.py:340
+msgid "sex"
+msgstr "Жынысы"
+
+#: .\templates\person\read.html:21 .\tree\models.py:40 .\tree\models.py:144
+#: .\tree\models.py:145 .\tree\views.py:341
+msgid "birthday"
+msgstr "Туған күні"
+
+#: .\templates\person\read.html:26 .\tree\models.py:41 .\tree\models.py:146
+#: .\tree\views.py:342
+msgid "tribe"
+msgstr "Тайпа"
+
+#: .\templates\person\read.html:32 .\tree\models.py:42 .\tree\models.py:147
+#: .\tree\views.py:343
+msgid "clan"
+msgstr "Ру"
+
+#: .\templates\person\read.html:38 .\tree\models.py:43 .\tree\models.py:148
+#: .\tree\views.py:344
+msgid "phone"
+msgstr "Телефон"
+
+#: .\templates\person\read.html:44 .\tree\models.py:44 .\tree\models.py:149
+#: .\tree\views.py:345
+msgid "address"
+msgstr "Мекенжай"
+
+#: .\templates\person\read.html:50 .\tree\models.py:45 .\tree\models.py:150
+#: .\tree\views.py:346
+msgid "email"
+msgstr "EMail"
+
+#: .\templates\person\read.html:69 .\tree\models.py:47 .\tree\models.py:152
+#: .\tree\views.py:347
+msgid "details"
+msgstr "Ескерту"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Шежіре"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Жүйеден шықтыңыз"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Қайта кіріңіз"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Қате логин немесе пароль"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "Сізде рұқсат жоқ"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Бұл бетті көру үшін жүйеге кіріңіз"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:26
+msgid "Login"
+msgstr "Кіру"
+
+#: .\templates\registration\login.html:31
+msgid "Lost password?"
+msgstr "Құпия сөзді жоғалттыңыз ба?"
+
+#: .\templates\registration\login.html:32
+#: .\templates\registration\signup.html:14
+msgid "Create an account"
+msgstr "Тіркелу"
+
+#: .\templates\registration\my_account.html:14
+msgid "Save changes"
+msgstr "Сақтау"
+
+#: .\templates\registration\password_change_done.html:5
+#, fuzzy
+#| msgid "Password has been changed!"
+msgid "Password changed"
+msgstr "Құпия сөз өзгертілді!"
+
+#: .\templates\registration\password_reset_complete.html:6
+#, fuzzy
+#| msgid "Password reset completed"
+msgid "Password reset completed!"
+msgstr "Құпия сөзді қалпына келтіру аяқталды"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Қайта кіру керек пе?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Құпия сөзді қалпына келтіруді растау"
+
+#: .\templates\registration\password_reset_confirm.html:17
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:15
+msgid "Reset password"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_confirm.html:24
+#, fuzzy
+#| msgid "Please enter new password."
+msgid "Please enter (and confirm) your new password."
+msgstr "Жаңа құпия сөзді енгізіңіз."
+
+#: .\templates\registration\password_reset_confirm.html:30
+msgid "New password:"
+msgstr "Жаңа Құпия Сөз:"
+
+#: .\templates\registration\password_reset_confirm.html:35
+msgid "Confirm password:"
+msgstr "Құпия сөзді растау:"
+
+#: .\templates\registration\password_reset_confirm.html:46
+msgid "Password reset failed"
+msgstr "Құпия сөзді қалпына келтіру сәтсіз аяқталды"
+
+#: .\templates\registration\password_reset_confirm.html:47
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"Құпия сөзді қалпына келтіру сілтемесі жарамсыз, мүмкін ол бұрын қолданылған "
+"болуы мүмкін. Жаңа құпия сөзді қалпына келтіруді сұраңыз."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Электрондық поштаны тексеріңіз"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Құпия сөзді қалпына келтіру сұралған электрондық пошта"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Төмендегі сілтеме бойынша өтіңіз:"
+
+#: .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Қош келдіңіз"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Есептік жазбаңыз сәтті құрылды."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:18
+#, fuzzy
+#| msgid "Login"
+msgid "Log in"
+msgstr "Кіру"
+
+#: .\templates\registration\signup.html:18
+#, fuzzy
+#| msgid "Create an account"
+msgid "Already have an account?"
+msgstr "Тіркелу"
+
+#: .\tree\models.py:36
+msgid "surname"
+msgstr "Тегі"
+
+#: .\tree\models.py:37
+msgid "name"
+msgstr "Аты"
+
+#: .\tree\models.py:38
+msgid "patronymic"
+msgstr "Әкесінің аты"
+
+#: .\tree\models.py:46 .\tree\models.py:151
+msgid "photo"
+msgstr "Фото"
+
+#: .\tree\models.py:142 .\tree\views.py:338
+msgid "fio"
+msgstr "Толық аты"
+
+#~ msgid "Manager"
+#~ msgstr "Менеджер"
+
+#~ msgid "Children"
+#~ msgstr "Балалар"
+
+#~ msgid "Exit"
+#~ msgstr "Шығу"
+
+#~ msgid "Password has been changed!"
+#~ msgstr "Құпия сөз өзгертілді!"
+
+#, fuzzy
+#~| msgid "The password reset link was invalid. Request new password reset."
+#~ msgid ""
+#~ "Құпия сөзді қалпына келтіру сілтемесі жарамсыз болды. Жаңа құпия сөзді "
+#~ "қалпына келтіруді сұраңызThe password reset link was invalid, possibly "
+#~ "because it has already been used. Please request a new password reset."
+#~ msgstr ""
+#~ "Құпия сөзді қалпына келтіру сілтемесі жарамсыз болды. Жаңа құпия сөзді "
+#~ "қалпына келтіруді сұраңыз."
+
+#~ msgid "Please, sign up using the following form:"
+#~ msgstr "Өтінемін, келесі форманы қолдана отырып тіркеліңіз:"
+
+#, fuzzy
+#~| msgid "Password reset"
+#~ msgid "Password"
+#~ msgstr "Құпия сөзді қалпына келтіру"
+
+#, fuzzy
+#~| msgid "Reset password"
+#~ msgid "Repeat password"
+#~ msgstr "Құпия сөзді қалпына келтіру"
+
+#, fuzzy
+#~| msgid "Password reset confirmation"
+#~ msgid "Passwords don't match."
+#~ msgstr "Құпия сөзді қалпына келтіруді растау"
+
+#, fuzzy
+#~| msgid "Confirm password:"
+#~ msgid "Change my password"
+#~ msgstr "Құпия сөзді растау:"
+
+#~ msgid "Reset password by email"
+#~ msgstr "Электрондық пошта арқылы құпия сөзді қалпына келтіру"
