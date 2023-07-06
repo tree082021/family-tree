@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-^@chv85^xzzvi+2x3k-hwzu9*zch5t%$4uxb$b_*fm31vb79mu
 DEBUG = False
 #DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'family-tree-h8wz.onrender.com',]
+ALLOWED_HOSTS = ['127.0.0.1', 'family-tree-7.onrender.com',]
 
 # Application definition (Зарегистрированные приложегия)
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tree',
     'crispy_forms',
+    'crispy_bootstrap4',
     'widget_tweaks',
     'django_cleanup',
     'cloudinary_storage',
@@ -95,10 +96,11 @@ WSGI_APPLICATION = 'family.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+
     #'default': {
     #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
     #    'NAME': 'family',
@@ -107,14 +109,16 @@ DATABASES = {
     #    'HOST' : '127.0.0.1',
     #    'PORT' : '5432',
     #}
-    #'default': {
-    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #    'NAME': 'd6so58ed0ubvft',
-    #    'USER' : 'vcdnszipvdpfnz',
-    #    'PASSWORD' : 'c3f7bd848b7ab7daf5e1f5be522d4cf72f16f12f83b0b15bf2b55b54b8ed1c00',
-    #    'HOST' : 'ec2-44-196-170-156.compute-1.amazonaws.com',
-    #    'PORT' : '5432',
-    #}
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'family',
+        'USER' : 'family_admin',
+        'PASSWORD' : 'ZBnxj2tPLhjPFdJhqPLxupFyyOBa6Rtt',
+        'HOST' : 'dpg-cij9nd95rnut2sbpvufg-a.frankfurt-postgres.render.com',
+        'PORT' : '5432',
+    }
+    
 }
 
 # Password validation
@@ -187,9 +191,9 @@ LOGIN_REDIRECT_URL = '/'
 
 # Сохранения изображения
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'haqtawlor',
-    'API_KEY': '525581322115357',
-    'API_SECRET': 'EI5OU9eSuJCIZpiN5scQoKvAQcc',
+    'CLOUD_NAME': 'dim3urf86',
+    'API_KEY': '653696514356649',
+    'API_SECRET': 'Npyj6n8tlHq0DxFiefKC7ZNUQNQ',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

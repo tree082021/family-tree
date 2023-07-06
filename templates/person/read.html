@@ -14,60 +14,60 @@
 					<table>		
 					{% if request.user.groups.all.0.name == "Managers"%}
 						<tr>
-							<td><strong>{% trans "sex" %}</strong>&nbsp:</td>
-							<td>{{ person_list.sex }}</td>
+							<td><p><strong>{% trans "sex" %}:</strong></p></td>
+							<td><p>{{ person_list.sex }}</p></td>
 						</tr>
 						<tr>
-							<td><strong>{% trans "birthday" %}</strong>&nbsp:</td>
-							<td>{{ person_list.birthday20 }}</td>
+							<td><p><strong>{% trans "birthday" %}:</strong></p></td>
+							<td><p>{{ person_list.birthday20 }}</p></td>
 						</tr>				
 						{% if person_list.tribe != None and person_list.tribe != ''%}
 							<tr>
-								<td><strong>{% trans "tribe" %}</strong>&nbsp:</td>
-								<td>{{ person_list.tribe }}</td>
+								<td><p><strong>{% trans "tribe" %}:</strong></p></td>
+								<td><p>{{ person_list.tribe }}</p></td>
 							</tr>
 						{% endif %}	
 						{% if person_list.clan != None and person_list.clan != ''%}
 							<tr>
-								<td><strong>{% trans "clan" %}</strong>&nbsp:</td>
-								<td>{{ person_list.clan }}</td>
+								<td><p><strong>{% trans "clan" %}:</strong></p></td>
+								<td><p>{{ person_list.clan }}</p></td>
 							</tr>
 						{% endif %}	
 						{% if person_list.phone != None and person_list.phone != ''%}
 							<tr>
-								<td><strong>{% trans "phone" %}</strong>&nbsp:</td>
-								<td>{{ person_list.phone }}</td>
+								<td><p><strong>{% trans "phone" %}:</strong></p></td>
+								<td><p>{{ person_list.phone }}</p></td>
 							</tr>
 						{% endif %}	
 						{% if person_list.address != None and person_list.address != '' %}
 							<tr>
-								<td><strong>{% trans "address" %}</strong>&nbsp:</td>
-								<td>{{ person_list.address }}</td>
+								<td><p><strong>{% trans "address" %}:</strong></p></td>
+								<td><p>{{ person_list.address }}</p></td>
 							</tr>
 						{% endif %}
 						{% if person_list.email != None and person_list.email != '' %}
 							<tr>
-								<td><strong>{% trans "email" %}</strong>&nbsp:</td>
-								<td>{{ person_list.email }}</td>
+								<td><p><strong>{% trans "email" %}:</strong></p></td>
+								<td><p>{{ person_list.email }}</p></td>
 							</tr>
 						{% endif %}
 					{% endif %}
 					{% if person_list.father != None %}
 						<tr>
-							<td><strong>{% trans "father" %}</strong>&nbsp:</td>
-							<td>{{ person_list.father }}</td>
+							<td><p><strong>{% trans "father" %}:</strong></p></td>
+							<td><p>{{ person_list.father }}</p></td>
 						</tr>
 					{% endif %}
 					{% if person_list.mother != None %}
 						<tr>
-							<td><strong>{% trans "mother" %}</strong>&nbsp:</td>
-							<td>{{ person_list.mother }}</td>
+							<td><p><strong>{% trans "mother" %}:</strong></p></td>
+							<td><p>{{ person_list.mother }}</p></td>
 						</tr>
 					{% endif %}					
 					{% if person_list.details != None and person_list.details != '' %}
 						<tr>
-							<td><strong>{% trans "details" %}</strong>&nbsp:</td>
-							<td>{{ person_list.details }}</td>
+							<td><p><strong>{% trans "details" %}:</strong></p></td>
+							<td><p>{{ person_list.details }}</p></td>
 						</tr>
 					{% endif %}
 					</table>				
@@ -85,11 +85,13 @@
 			{% endif %}			
 		</div>		
 	</div>
-	{% if request.user.groups.all.0.name == "Managers" %}
+	<br>
+	<div class="div-button-center">
+		{% if request.user.groups.all.0.name == "Managers" %}
 		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'person_index' %}">Назад</a>    	
 		{% else %}
 		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'person_list' %}">Назад</a>    	
-	{% endif %}
+		{% endif %}
+	</div>
 </div>
-
 {% endblock content %}

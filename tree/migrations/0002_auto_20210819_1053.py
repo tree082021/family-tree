@@ -6,6 +6,8 @@ def new_person(apps, schema_editor):
     
     user = User.objects.create_superuser(username='mabylmazhitov',
         email='mabylmazhitov@gmail.com',
+        first_name='Марат', 
+        last_name='Абылмажитов',
         password='Mm100Ff+Tt-*789')
     managers = Group.objects.get_or_create(name = 'Managers')
     my_group = Group.objects.get(name='Managers')    
@@ -1970,46 +1972,46 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(new_person),
-        migrations.RunSQL("""CREATE VIEW person_list AS
-            SELECT id, iif( surname = "Нет данных", "", surname || ' ')  || name  || iif(patronymic NOT Null, ' '  || patronymic, '') AS fio,
-            sex, birthday, iif(strftime('%Y',birthday)>"1900", strftime('%d.%m.%Y',birthday),"") AS birthday20, tribe, clan, phone, address, email, photo, details, father_id,
-            (SELECT iif( surname = "Нет данных", "", surname || ' ')  || name || iif(patronymic NOT Null, ' '  || patronymic, '')  FROM Person f WHERE f.id=p.father_id) AS father,
-            mother_id, (SELECT iif( surname = "Нет данных", "", surname || ' ')  || name || iif(patronymic NOT Null, ' '  || patronymic, '')  FROM Person m WHERE m.id=p.mother_id) AS mother,
-            (SELECT GROUP_CONCAT(name ||  iif(strftime('%Y',birthday)>"1900", ' (' || strftime('%Y',birthday) || ')',"") ,'; ')
-            FROM Person c WHERE c.father_id=p.id ORDER BY birthday) AS children FROM Person p;"""),
-#        migrations.RunSQL("""CREATE VIEW person_list AS 
-#        SELECT id, 
-#	CASE WHEN surname = 'Нет данных' THEN name 
-#		ELSE surname || ' '  || name  
-#		|| 
-#	CASE WHEN patronymic IS Null THEN ''  
-#		ELSE ' ' || patronymic
-#	END
-#	END
-#	AS fio, sex, birthday, 
-#	CASE WHEN EXTRACT(YEAR FROM birthday) >1900 THEN to_char( birthday, 'DD-MM-YYYY')
-#	ELSE ''
-#	END
-#	AS birthday20, tribe, clan, phone, address, email, photo, details, father_id, 
-#(SELECT 
-# 	CASE WHEN surname = 'Нет данных' THEN name
-# 	ELSE surname || ' ' || name || 
-# 	CASE WHEN patronymic IS Null THEN ''  
-# 	ELSE ' ' || patronymic
-# 	END
-# 	END 
-# FROM Person f WHERE f.id=p.father_id) AS father, mother_id, 
-# (SELECT 
-# 	CASE WHEN surname = 'Нет данных' THEN name
-# 	ELSE surname || ' ' || name || 
-# 	CASE WHEN patronymic IS Null THEN ''  
-# 	ELSE ' ' || patronymic
-# 	END
-# 	END 
-# FROM Person f WHERE f.id=p.mother_id) AS mother, 
-#  (SELECT array_agg(name ||  
-#	CASE WHEN EXTRACT(YEAR FROM birthday) >1900 THEN ' (' || to_char( birthday, 'YYYY') || ')'
-#	ELSE ''
-#	END
-#    ) FROM Person c WHERE c.father_id=p.id) AS children FROM Person p;"""),    
+        #migrations.RunSQL("""CREATE VIEW person_list AS
+        #    SELECT id, iif( surname = "Нет данных", "", surname || ' ')  || name  || iif(patronymic NOT Null, ' '  || patronymic, '') AS fio,
+        #    sex, birthday, iif(strftime('%Y',birthday)>"1900", strftime('%d.%m.%Y',birthday),"") AS birthday20, tribe, clan, phone, address, email, photo, details, father_id,
+        #    (SELECT iif( surname = "Нет данных", "", surname || ' ')  || name || iif(patronymic NOT Null, ' '  || patronymic, '')  FROM Person f WHERE f.id=p.father_id) AS father,
+        #    mother_id, (SELECT iif( surname = "Нет данных", "", surname || ' ')  || name || iif(patronymic NOT Null, ' '  || patronymic, '')  FROM Person m WHERE m.id=p.mother_id) AS mother,
+        #    (SELECT GROUP_CONCAT(name ||  iif(strftime('%Y',birthday)>"1900", ' (' || strftime('%Y',birthday) || ')',"") ,'; ')
+        #    FROM Person c WHERE c.father_id=p.id ORDER BY birthday) AS children FROM Person p;"""),
+        migrations.RunSQL("""CREATE VIEW person_list AS 
+        SELECT id, 
+	CASE WHEN surname = 'Нет данных' THEN name 
+		ELSE surname || ' '  || name  
+		|| 
+	CASE WHEN patronymic IS Null THEN ''  
+		ELSE ' ' || patronymic
+	END
+	END
+	AS fio, sex, birthday, 
+	CASE WHEN EXTRACT(YEAR FROM birthday) >1900 THEN to_char( birthday, 'DD-MM-YYYY')
+	ELSE ''
+	END
+	AS birthday20, tribe, clan, phone, address, email, photo, details, father_id, 
+(SELECT 
+ 	CASE WHEN surname = 'Нет данных' THEN name
+ 	ELSE surname || ' ' || name || 
+ 	CASE WHEN patronymic IS Null THEN ''  
+ 	ELSE ' ' || patronymic
+ 	END
+ 	END 
+ FROM Person f WHERE f.id=p.father_id) AS father, mother_id, 
+ (SELECT 
+ 	CASE WHEN surname = 'Нет данных' THEN name
+ 	ELSE surname || ' ' || name || 
+ 	CASE WHEN patronymic IS Null THEN ''  
+ 	ELSE ' ' || patronymic
+ 	END
+ 	END 
+ FROM Person f WHERE f.id=p.mother_id) AS mother, 
+  (SELECT array_agg(name ||  
+	CASE WHEN EXTRACT(YEAR FROM birthday) >1900 THEN ' (' || to_char( birthday, 'YYYY') || ')'
+	ELSE ''
+	END
+    ) FROM Person c WHERE c.father_id=p.id) AS children FROM Person p;"""),    
     ]

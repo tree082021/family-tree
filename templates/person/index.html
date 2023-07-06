@@ -6,14 +6,14 @@
 <h2>{% trans "List" %}</h2>
 {% if person_list.count > 0 %}
 <div class="row">
-	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+	<table id="myTable" class="table-manager" style="width:100%">
 		<thead>
 			<tr>
-				<th>{% trans "Full name" %}</th>
-				<th>{% trans "Father" %}</th>
-				<th>{% trans "Mother" %}</th>
-				<th></th>
-				<th><a href="{% url 'person_create'%}">{% trans "Create" %}</a></th>				
+				<th><p>{% trans "Full name" %}</p></th>
+				<th><p>{% trans "Father" %}</p></th>
+				<th><p>{% trans "Mother" %}</p></th>
+				<th><p></p></th>
+				<th><p><a href="{% url 'person_create'%}">{% trans "Create" %}</a></p></th>				
 			</tr>
 		</thead>
 		<tbody>
@@ -26,24 +26,26 @@
 					{% endif %}
 				</td>
 				<td>
-					{% if p.father != None %}
+					<p>{% if p.father != None %}
 					{{ p.father }}
-					{% endif %}	
+					{% endif %}</p>	
 				</td>
 				<td>
-					{% if p.mother != None %}
+					<p>{% if p.mother != None %}
 					{{ p.mother }}
-					{% endif %}	
+					{% endif %}</p>
 				</td>				
 				<td>
-					{% if p.photo.url != None %}
+					<p>{% if p.photo.url != None %}
 					<img style="width:100%; max-width:256px; padding:10px" src="{{ p.photo.url}}" alt="{{ p.fio }}">
-					{% endif %}	
+					{% endif %}</p>	
 				</td>
 				<td>
+					<p>
 					<a href="{% url 'person_edit' p.id %}">{% trans "Change" %}</a> |
 					<a href="{% url 'person_read' p.id %}">{% trans "Read" %}</a> |
 					<a onclick="return confirm('Удалить запись?')" href="{% url 'person_delete' p.id %}">{% trans "Delete" %}</a>
+					</p>
 				</td>			
 			</tr>
 			{% endfor %}

@@ -12,7 +12,7 @@
 </div>
 {% endif %}		
 <div class="row" style="width:100%">
-	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+	<table id="myTable" class="table-manager" style="width:100%">
 		<thead>
 			<tr>
 				<th></th>
@@ -34,12 +34,12 @@
 									<table tyle="width:100%">			
 										{% if p.father != None %}										
 											<tr>
-												<td><strong>{% trans "father" %}:</strong></td><td style="width:100%"> {{ p.father }}</td>
+												<td><p><strong>{% trans "father" %}:</strong></p></td><td style="width:100%"><p>{{ p.father }}</p></td>
 											</tr>
 										{% endif %}	
 										{% if p.mother != None %}										
 											<tr>
-												<td><strong>{% trans "mother" %}:</strong></td><td style="width:100%"> {{ p.mother }}</td>
+												<td><p><strong>{% trans "mother" %}:</strong></p></td><td style="width:100%"><p>{{ p.mother }}</p></td>
 											</tr>
 										{% endif %}							
 										</tr>
@@ -55,7 +55,7 @@
 						</div>
 						<div class="card-footer">
 							{% if p.children != None %}
-								<strong>{% trans "children" %}:</strong> {{ p.children }}
+								<p><strong>{% trans "children" %}:</strong> {{ p.children }}</p>
 							{% endif %}								
 						</div>
 					</div>				
