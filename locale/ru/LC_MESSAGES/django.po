@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-15 15:58+0600\n"
+"POT-Creation-Date: 2023-07-06 17:25+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,39 @@ msgstr ""
 "10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
 "100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\templates\base.html:25
+#: .\templates\base.html:36
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:32
+#: .\templates\base.html:43
 msgid "Contact"
 msgstr "Контакты"
 
-#: .\templates\base.html:37 .\templates\catalog.html:3
+#: .\templates\base.html:48 .\templates\catalog.html:3
 msgid "Catalog"
 msgstr "Список"
 
-#: .\templates\base.html:41
+#: .\templates\base.html:52
 msgid "Person"
 msgstr "Персона"
 
-#: .\templates\base.html:50 .\templates\registration\my_account.html:4
-#: .\templates\registration\my_account.html:10
-#, fuzzy
-#| msgid "Create my account"
+#: .\templates\base.html:61
 msgid "My account"
-msgstr "Создать учетную запись"
+msgstr "Моя учетная запись"
 
-#: .\templates\base.html:51
-#: .\templates\registration\password_change_form.html:9
-#: .\templates\registration\password_change_form.html:14
-#, fuzzy
-#| msgid "New password:"
+#: .\templates\base.html:62
 msgid "Change password"
 msgstr "Новый пароль:"
 
-#: .\templates\base.html:53
-#, fuzzy
-#| msgid "Logged out!"
+#: .\templates\base.html:64
 msgid "Log out"
-msgstr "Выход выполнен"
+msgstr "Выход"
 
-#: .\templates\base.html:59 .\templates\registration\signup.html:4
-#: .\templates\registration\signup.html:10
+#: .\templates\base.html:69
+msgid "Log in"
+msgstr "Войти"
+
+#: .\templates\base.html:70
 msgid "Sign up"
 msgstr "Регистрация"
 
@@ -75,17 +69,19 @@ msgid "Export Chart"
 msgstr "Экспорт в рисунок"
 
 #: .\templates\catalog.html:37 .\templates\person\read.html:57
-#: .\tree\forms.py:32 .\tree\models.py:154 .\tree\views.py:336
+#: .\tree\forms.py:35 .\tree\models.py:155 .\tree\tests\test_forms.py:44
+#: .\tree\views.py:365
 msgid "father"
 msgstr "Отец"
 
 #: .\templates\catalog.html:42 .\templates\person\read.html:63
-#: .\tree\forms.py:33 .\tree\models.py:156 .\tree\views.py:337
+#: .\tree\forms.py:36 .\tree\models.py:157 .\tree\tests\test_forms.py:46
+#: .\tree\views.py:366
 msgid "mother"
 msgstr "Мать"
 
 #: .\templates\catalog.html:58 .\templates\person\read.html:84
-#: .\tree\models.py:157 .\tree\views.py:348 .\tree\views.py:350
+#: .\tree\models.py:158 .\tree\views.py:377 .\tree\views.py:379
 msgid "children"
 msgstr "Дети"
 
@@ -98,12 +94,20 @@ msgid "Tree"
 msgstr "Шежіре"
 
 #: .\templates\person\create.html:3 .\templates\person\create.html:4
-#: .\templates\person\index.html:16 .\templates\person\index.html:54
+#: .\templates\person\index.html:16 .\templates\person\index.html:56
 msgid "Create"
 msgstr "Создать"
 
+#: .\templates\person\create.html:12 .\templates\person\edit.html:12
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\person\create.html:13 .\templates\person\edit.html:13
+msgid "Back"
+msgstr "Назад"
+
 #: .\templates\person\edit.html:3 .\templates\person\edit.html:4
-#: .\templates\person\index.html:44
+#: .\templates\person\index.html:45
 msgid "Change"
 msgstr "Изменить"
 
@@ -123,52 +127,59 @@ msgstr "Мать"
 msgid "Date of Birth"
 msgstr "Дата рождения"
 
-#: .\templates\person\index.html:45 .\templates\person\read.html:3
+#: .\templates\person\index.html:46 .\templates\person\read.html:3
 #: .\templates\person\read.html:4
 msgid "Read"
 msgstr "Просмотр"
 
-#: .\templates\person\index.html:46
+#: .\templates\person\index.html:47
 msgid "Delete"
 msgstr "Удалить"
 
-#: .\templates\person\read.html:17 .\tree\models.py:39 .\tree\models.py:143
-#: .\tree\views.py:340
+#: .\templates\person\read.html:17 .\tree\models.py:39 .\tree\models.py:144
+#: .\tree\tests\test_forms.py:26 .\tree\views.py:369
 msgid "sex"
 msgstr "Пол"
 
-#: .\templates\person\read.html:21 .\tree\models.py:40 .\tree\models.py:144
-#: .\tree\models.py:145 .\tree\views.py:341
+#: .\templates\person\read.html:21 .\tree\models.py:40 .\tree\models.py:145
+#: .\tree\models.py:146 .\tree\tests\test_forms.py:28
+#: .\tree\tests\test_models.py:77 .\tree\views.py:370
 msgid "birthday"
 msgstr "Дата рождения"
 
-#: .\templates\person\read.html:26 .\tree\models.py:41 .\tree\models.py:146
-#: .\tree\views.py:342
+#: .\templates\person\read.html:26 .\tree\models.py:41 .\tree\models.py:147
+#: .\tree\tests\test_forms.py:30 .\tree\tests\test_models.py:78
+#: .\tree\views.py:371
 msgid "tribe"
 msgstr "Племя"
 
-#: .\templates\person\read.html:32 .\tree\models.py:42 .\tree\models.py:147
-#: .\tree\views.py:343
+#: .\templates\person\read.html:32 .\tree\models.py:42 .\tree\models.py:148
+#: .\tree\tests\test_forms.py:32 .\tree\tests\test_models.py:79
+#: .\tree\views.py:372
 msgid "clan"
 msgstr "Клан"
 
-#: .\templates\person\read.html:38 .\tree\models.py:43 .\tree\models.py:148
-#: .\tree\views.py:344
+#: .\templates\person\read.html:38 .\tree\models.py:43 .\tree\models.py:149
+#: .\tree\tests\test_forms.py:34 .\tree\tests\test_models.py:80
+#: .\tree\views.py:373
 msgid "phone"
 msgstr "Телефон"
 
-#: .\templates\person\read.html:44 .\tree\models.py:44 .\tree\models.py:149
-#: .\tree\views.py:345
+#: .\templates\person\read.html:44 .\tree\models.py:44 .\tree\models.py:150
+#: .\tree\tests\test_forms.py:36 .\tree\tests\test_models.py:81
+#: .\tree\views.py:374
 msgid "address"
 msgstr "Адрес"
 
-#: .\templates\person\read.html:50 .\tree\models.py:45 .\tree\models.py:150
-#: .\tree\views.py:346
+#: .\templates\person\read.html:50 .\tree\models.py:45 .\tree\models.py:151
+#: .\tree\tests\test_forms.py:38 .\tree\tests\test_models.py:82
+#: .\tree\views.py:375
 msgid "email"
 msgstr "EMail"
 
-#: .\templates\person\read.html:69 .\tree\models.py:47 .\tree\models.py:152
-#: .\tree\views.py:347
+#: .\templates\person\read.html:69 .\tree\models.py:47 .\tree\models.py:153
+#: .\tree\tests\test_forms.py:42 .\tree\tests\test_models.py:84
+#: .\tree\views.py:376
 msgid "details"
 msgstr "Примечание"
 
@@ -184,192 +195,43 @@ msgstr "Примечание"
 msgid "App Name"
 msgstr "Шежіре"
 
-#: .\templates\registration\logged_out.html:6
-msgid "Logged out!"
-msgstr "Выход выполнен"
+#: .\tree\forms.py:47 .\tree\forms.py:55 .\tree\forms.py:65
+msgid "Value must start with a capital letter"
+msgstr "Значение должно начинаться с заглавной буквы"
 
-#: .\templates\registration\logged_out.html:7
-msgid "Login again"
-msgstr "Войти снова"
+#: .\tree\forms.py:75
+msgid "Cannot be greater than the current date"
+msgstr "Не может быть больше текущей даты"
 
-#: .\templates\registration\login.html:7
-msgid "Incorrect login or password"
-msgstr "Неверный логин или пароль"
-
-#: .\templates\registration\login.html:12
-msgid "You dont have access"
-msgstr "У вас нет доступа"
-
-#: .\templates\registration\login.html:14
-msgid "Login to see this page"
-msgstr "Авторизуйтесь, чтобы увидеть эту страницу"
-
-#: .\templates\registration\login.html:22
-msgid "Authorization"
-msgstr "Авторизация"
-
-#: .\templates\registration\login.html:26
-msgid "Login"
-msgstr "Вход"
-
-#: .\templates\registration\login.html:31
-msgid "Lost password?"
-msgstr "Забыли пароль?"
-
-#: .\templates\registration\login.html:32
-#: .\templates\registration\signup.html:14
-msgid "Create an account"
-msgstr "Зарегистрироваться"
-
-#: .\templates\registration\my_account.html:14
-msgid "Save changes"
-msgstr "Сохранить"
-
-#: .\templates\registration\password_change_done.html:5
-#, fuzzy
-#| msgid "Password has been changed!"
-msgid "Password changed"
-msgstr "Пароль был изменен!"
-
-#: .\templates\registration\password_reset_complete.html:6
-#, fuzzy
-#| msgid "Password reset completed"
-msgid "Password reset completed!"
-msgstr "Сброс пароля завершен"
-
-#: .\templates\registration\password_reset_complete.html:7
-msgid "Log in again?"
-msgstr "Войти снова?"
-
-#: .\templates\registration\password_reset_confirm.html:5
-#: .\templates\registration\password_reset_confirm.html:12
-msgid "Password reset confirmation"
-msgstr "Подтверждение сброса пароля"
-
-#: .\templates\registration\password_reset_confirm.html:17
-#: .\templates\registration\password_reset_form.html:10
-#: .\templates\registration\password_reset_form.html:15
-msgid "Reset password"
-msgstr "Сброс пароля"
-
-#: .\templates\registration\password_reset_confirm.html:24
-#, fuzzy
-#| msgid "Please enter new password."
-msgid "Please enter (and confirm) your new password."
-msgstr "Пожалуйста, введите новый пароль."
-
-#: .\templates\registration\password_reset_confirm.html:30
-msgid "New password:"
-msgstr "Новый пароль:"
-
-#: .\templates\registration\password_reset_confirm.html:35
-msgid "Confirm password:"
-msgstr "Подтвердите пароль:"
-
-#: .\templates\registration\password_reset_confirm.html:46
-msgid "Password reset failed"
-msgstr "Не удалось сбросить пароль"
-
-#: .\templates\registration\password_reset_confirm.html:47
-#, fuzzy
-#| msgid "The password reset link was invalid. Request new password reset."
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used. Please request a new password reset."
+#: .\tree\forms.py:86
+msgid "Enter your phone number in the format +7-ХХХ-ХХХ-ХХХХ or 8-ХХХ-ХХХ-ХХХХ"
 msgstr ""
-"Ссылка для сброса пароля недействительна. Запросить новый сброс пароля."
+"Введите свой номер телефона в формате +7-ХХХ-ХХХ-ХХХХ или 8-ХХХ-ХХХ-ХХХХ"
 
-#: .\templates\registration\password_reset_done.html:6
-msgid "Password reset"
-msgstr "Восстановление пароля"
+#: .\tree\forms.py:95
+msgid "Please enter a valid email address"
+msgstr "Пожалуйста, введите действительный адрес электронной почты"
 
-#: .\templates\registration\password_reset_done.html:7
-msgid "Check your email"
-msgstr "Проверьте свою электронную почту"
-
-#: .\templates\registration\password_reset_email.html:2
-msgid "Asked password reset email"
-msgstr "Запрошенное письмо для сброса пароля"
-
-#: .\templates\registration\password_reset_email.html:2
-msgid "Follow the link below:"
-msgstr "Перейдите по ссылке ниже:"
-
-#: .\templates\registration\register_done.html:10
-msgid "Welcome"
-msgstr "Добро пожаловать"
-
-#: .\templates\registration\register_done.html:11
-msgid "Your account has been successfully created."
-msgstr "Ваша учетная запись была успешно создана."
-
-#: .\templates\registration\register_done.html:11
-#: .\templates\registration\signup.html:18
-#, fuzzy
-#| msgid "Login"
-msgid "Log in"
-msgstr "Вход"
-
-#: .\templates\registration\signup.html:18
-#, fuzzy
-#| msgid "Create an account"
-msgid "Already have an account?"
-msgstr "Зарегистрироваться"
-
-#: .\tree\models.py:36
+#: .\tree\models.py:36 .\tree\tests\test_forms.py:20
+#: .\tree\tests\test_models.py:74
 msgid "surname"
 msgstr "Фамилия"
 
-#: .\tree\models.py:37
+#: .\tree\models.py:37 .\tree\tests\test_forms.py:22
+#: .\tree\tests\test_models.py:75
 msgid "name"
 msgstr "Имя"
 
-#: .\tree\models.py:38
+#: .\tree\models.py:38 .\tree\tests\test_forms.py:24
+#: .\tree\tests\test_models.py:76
 msgid "patronymic"
 msgstr "Отчество"
 
-#: .\tree\models.py:46 .\tree\models.py:151
+#: .\tree\models.py:46 .\tree\models.py:152 .\tree\tests\test_forms.py:40
+#: .\tree\tests\test_models.py:83
 msgid "photo"
 msgstr "Фотография"
 
-#: .\tree\models.py:142 .\tree\views.py:338
+#: .\tree\models.py:143 .\tree\views.py:367
 msgid "fio"
 msgstr "ФИО"
-
-#~ msgid "Manager"
-#~ msgstr "Менеджер"
-
-#~ msgid "Children"
-#~ msgstr "Дети"
-
-#~ msgid "Exit"
-#~ msgstr "Выход"
-
-#~ msgid "Password has been changed!"
-#~ msgstr "Пароль был изменен!"
-
-#~ msgid "Please, sign up using the following form:"
-#~ msgstr "Пожалуйста, зарегистрируйтесь, используя следующую форму:"
-
-#, fuzzy
-#~| msgid "Password reset"
-#~ msgid "Password"
-#~ msgstr "Восстановление пароля"
-
-#, fuzzy
-#~| msgid "Reset password"
-#~ msgid "Repeat password"
-#~ msgstr "Сброс пароля"
-
-#, fuzzy
-#~| msgid "Password reset confirmation"
-#~ msgid "Passwords don't match."
-#~ msgstr "Подтверждение сброса пароля"
-
-#, fuzzy
-#~| msgid "Confirm password:"
-#~ msgid "Change my password"
-#~ msgstr "Подтвердите пароль:"
-
-#~ msgid "Reset password by email"
-#~ msgstr "Сбросить пароль по электронной почте"
