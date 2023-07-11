@@ -4,7 +4,7 @@
 	--navbar-background-color: LightCyan;
 	--main-background-color-light: AliceBlue;
 	--main-background-color-dark: LightCyan;
-	--main-text-color: Blue;
+	--navbar-text-color: DarkBlue;
 	--main-header-color: MidnightBlue;
 	--main-text-attention-color: DarkRed;
 	--footer-background-color-light: Blue;
@@ -61,6 +61,11 @@
 }
 
 .nav-item {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+	font-weight: bold;
+}
+.nav-item a {
 	background-color: var(--navbar-background-color);
 	color: var(--navbar-text-color);
 	font-weight: bold;
